@@ -13,7 +13,10 @@ import ch.makery.address.view.PersonEditDialogController
 import scalafx.stage.Stage
 import scalafx.stage.Modality
 
-
+//Window Root Pane
+var roots: Option[scalafx.scene.layout.BorderPane] = None
+//stylesheet
+var cssResource = getClass.getResource("view/DarkTheme.css")
 
 object MainApp extends JFXApp3:
 
@@ -67,6 +70,7 @@ object MainApp extends JFXApp3:
     loader.load();
     val roots2 = loader.getRoot[jfxs.Parent]
     val control = loader.getController[PersonEditDialogController]
+    
 
     val dialog = new Stage():
       initModality(Modality.ApplicationModal)
@@ -79,3 +83,8 @@ object MainApp extends JFXApp3:
     dialog.showAndWait()
     control.okClicked
 
+  stage = new PrimaryStage():
+    title = "AddressApp"
+    scene = new Scene():
+      stylesheets = Seq(cssResource.toExternalForm)
+      root = roots.get

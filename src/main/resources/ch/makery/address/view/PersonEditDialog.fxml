@@ -9,8 +9,7 @@
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PersonEditDialogController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="300.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.PersonEditDialogController">
    <children>
       <GridPane layoutX="50.0" layoutY="38.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
         <columnConstraints>
@@ -40,10 +39,10 @@
             <TextField fx:id="birthdayField" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
-      <ButtonBar layoutX="116.0" layoutY="249.0" prefHeight="38.0" prefWidth="137.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
+      <ButtonBar buttonMinWidth="98.0" layoutX="116.0" layoutY="249.0" prefHeight="38.0" prefWidth="137.0" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="10.0">
         <buttons>
-          <Button mnemonicParsing="false" onAction="#handleCancel" text="Cancel" />
-            <Button mnemonicParsing="false" onAction="#handleOk" text="Confirm" />
+          <Button mnemonicParsing="false" onAction="#handleCancel" prefHeight="31.0" prefWidth="139.0" text="Cancel" />
+            <Button defaultButton="true" mnemonicParsing="false" onAction="#handleOk" text="Confirm" />
         </buttons>
       </ButtonBar>
    </children>
