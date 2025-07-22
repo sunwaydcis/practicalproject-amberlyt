@@ -5,21 +5,21 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.BorderPane?>
 
-<BorderPane prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" stylesheets="@DarkTheme.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.makery.address.view.RootLayoutController">
   <top>
     <MenuBar BorderPane.alignment="CENTER">
       <menus>
-        <Menu mnemonicParsing="false" text="File">
+        <Menu text="_File">
           <items>
-            <MenuItem mnemonicParsing="false" text="Close" />
+            <MenuItem onAction="#handleClose" text="_Close" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Edit">
+        <Menu text="_Edit">
           <items>
-            <MenuItem mnemonicParsing="false" text="Delete" />
+            <MenuItem mnemonicParsing="false" onAction="#handleDelete" text="Delete" />
           </items>
         </Menu>
-        <Menu mnemonicParsing="false" text="Help">
+        <Menu text="_Help">
           <items>
             <MenuItem mnemonicParsing="false" text="About" />
           </items>
