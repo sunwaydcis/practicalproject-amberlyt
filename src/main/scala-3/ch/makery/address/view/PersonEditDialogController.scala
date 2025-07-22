@@ -98,4 +98,3 @@ class PersonEditDialogController ():
       .showAndWait()
       false
     end if
-

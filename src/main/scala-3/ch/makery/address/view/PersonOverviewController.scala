@@ -32,7 +32,7 @@ class PersonOverviewController():
   private var birthdayLabel: Label = null
   @FXML
   private var mytext : TextField = null
-  
+
   // initialize Table View display contents model
   def initialize() =
     personTable.items = MainApp.personData
@@ -82,7 +82,7 @@ class PersonOverviewController():
     if (selectedIndex >= 0) then
       personTable.items().remove(selectedIndex)
     else
-    // Nothing selected.
+      // Nothing selected.
       val alert = new Alert(AlertType.Warning):
         initOwner(MainApp.stage)
         title = "Error"
@@ -111,6 +111,5 @@ class PersonOverviewController():
         headerText = "No Person Selected"
         contentText = "Please select a person in the table."
       .showAndWait()
-
 
 
